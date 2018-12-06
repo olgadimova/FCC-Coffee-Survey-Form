@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Coffee Survey Form</title>
+    <style>
+
+html body {
+  height: 100%;
+  text-align: center;
+  font-family: Arial;
+}
+body {
+  background-color: #6f4e37; 
+}
+#main-form {
+  background-color: #FAFAFA;
+  border: 10px solid #37586f;
+  border-radius: 5px;
+  width: 70%;
+  margin: auto;
+}
+.row {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+label {
+  margin-right: 20px;
+}
+input {
+  height: 20px; 
+  width:70%;
+  padding-left: 5px;
+}
+.left {
+  display: inline-block;
+  width: 40%;
+  text-align: right;
+  vertical-align: middle;
+}
+.right {
+  display: inline-block;
+  text-align: left;
+  width: 50%;
+  vertical-align: middle;
+}
+li.checkboxes {
+  position: relative;
+  left: -45px;
+}
+.checkboxes input {
+  width: 20px;
+  height: 15px;
+  margin-top:0;
+}
+li.radio-list {
+  position: relative;
+  left: -45px;
+}
+.radio-list input {
+  width: 20px;
+  height: 15px;
+}
+button {
+  font-size: 20px;
+  background-color:  #37586f;
+  padding: 5px 10px 5px 10px;
+  color: white;
+  border-radius: 5px;
+}
+   </style>
+</head>
+<body>
+<h1 id="title"><u>Coffee Survey Form</u></h1>
+<div id="main-form">
+  <p id="description"><em>Coffee Consumption Research Form</em></p>
+  <form id="survey-form">
+    <div class="row">
+      <div class="left">
+    <label id="name-label" for="name">* Name</label>
+      </div>
+      <div class="right">
+      <input type="text" id="name" placeholder="Write Your Name Here..." required>
+      </div>
+    </div>
+    
+    <div class="row">
+    <div class="left">
+    <label id="email-label" for="email">* Email </label>
+     </div>
+      <div class="right">
+      <input type="email" id="email" placeholder="Write Your Email Here..." required>
+      </div>
+    </div>
+      
+      <div class="row">
+        <div class="left">
+    <label id="number-label" for="number">* № of cups/per day(1-10) </label>
+        </div>
+        <div class="right">
+      <input type="number" id="number" placeholder="Number Of Cups Per Day..." min="1" max="10" required>
+        </div>
+        
+        <div class="row">
+        <div class="left">
+         <label for="dropdown" id="dropdown-label">
+           Type of Coffee You Drink
+          </label>
+          </div>
+          <div class="right">
+            <select id="dropdown">
+              <option disabled selected value>Choose Coffee</option>
+              <option value="Americano">Americano</option>
+              <option value="Latte">Latte</option>
+              <option value="Cappuchino">Cappuchino</option>
+              <option value="Mocha">Mocha</option>
+              <option value="Other">Other</option>
+            </select>
+          </div> 
+          </div>
+        
+        <div class="row">
+          <div class="left">
+            <label for="radio-buttons">Why do you like drinking coffee?</label>
+          </div>
+          <div class="right">
+        <ul style="list-style: none">
+          <li class="radio-list"><label><input type="radio" name="radio-buttons" value="1">Taste<label></li>
+            <li class="radio-list"><label><input type="radio" name="radio-buttons" value="2">Smell</li>
+            <li class="radio-list"><label><input type="radio" name="radio-buttons" value="3">Caffeine<label></li>
+            </ul>
+          </div>
+        </div>
+   
+  <div class="row">
+    <div class="left">
+      <label for="addons">What do you add to your coffee?</label>
+    </div>
+    <div class="right">
+      <ul id="addons" style="list-style: none">
+        <li class="checkboxes"><label><input type="checkbox" name="addition" value="1">Sugar</label></li> 
+        <li class="checkboxes"><label><input type="checkbox" name="addition" value="2">Milk</label></li>
+        <li class="checkboxes"><label><input type="checkbox" name="addition" value="3">Syrop</label></li>
+      </ul>
+      </div>
+            </div>
+       <div class="row">
+         <div class="left">
+           <label for="text-area">Additional Information:</label>
+         </div>
+         <div class="right">
+           <textarea name="text-area" placeholder="Write Your Suggestions Here..." style="width: 70%;height: 50px; resize: vertical"></textarea>
+         </div>
+            </div>
+            
+        <div class="row">
+          <button type="submit" id="submit">Submit</button>
+            </div>
+  </form>
+</div>
+</body>
+</html>
